@@ -1,0 +1,12 @@
+1. Event Time : Time at which events are generated at source.
+2. Ingestion Time : Time at which event enters at flink via a source. This is a time stamp flink gives to an event.
+3. Processing Time : The system time of the machine which is running flink and actually processing these events.
+
+Chronologically :
+    Event time
+    Ingestion time
+    Processing time
+
+Events are generated at source, received at flink and processed them.
+Processing time is non deterministic as it depends on whole lot of factors like :- when the data arrives, how long the
+operation takes etc.
